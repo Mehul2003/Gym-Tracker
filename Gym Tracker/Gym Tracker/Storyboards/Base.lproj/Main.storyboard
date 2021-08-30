@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7kn-5d-zM1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="QsQ-yV-wfR">
+            <objects>
+                <viewController id="Vqa-QB-Hoh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eCp-FA-2bh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FVZ-Ag-Q43"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="7Uv-Sl-D3w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKw-60-ovo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="202" y="366"/>
+        </scene>
+        <!--Workouts View Controller-->
+        <scene sceneID="4wg-ao-HLu">
+            <objects>
+                <viewController id="w4I-1E-9B5" customClass="WorkoutsViewController" customModule="Gym_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ctx-dg-FIk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="WorkoutTableViewCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RA7-46-kKU">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LOe-pE-83C">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LOe-pE-83C" id="oZA-Nf-HJz">
+                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1yp-Ga-yWR" kind="showDetail" identifier="showdetail" id="esN-H4-LZ5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c1Z-Tq-pic"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RA7-46-kKU" firstAttribute="top" secondItem="c1Z-Tq-pic" secondAttribute="top" id="eiy-8E-6xc"/>
+                            <constraint firstItem="c1Z-Tq-pic" firstAttribute="trailing" secondItem="RA7-46-kKU" secondAttribute="trailing" id="iv0-mc-m7x"/>
+                            <constraint firstItem="c1Z-Tq-pic" firstAttribute="bottom" secondItem="RA7-46-kKU" secondAttribute="bottom" id="mN4-7H-IGD"/>
+                            <constraint firstItem="RA7-46-kKU" firstAttribute="leading" secondItem="c1Z-Tq-pic" secondAttribute="leading" id="oUP-O2-je3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3HA-BL-UOM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yWI-QL-hga">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="w4I-1E-9B5" id="p1k-2a-99S"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="workoutsTableView" destination="RA7-46-kKU" id="FDe-3b-WTJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nG0-H7-tM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="-299"/>
+        </scene>
+        <!--Workout Info View Controller-->
+        <scene sceneID="eYz-Ks-UAC">
+            <objects>
+                <viewController id="KdG-6Q-dLE" customClass="WorkoutInfoViewController" customModule="Gym_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iyg-tW-oN8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ExerciseTableViewCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dgd-56-zjQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X43-S3-rdC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dgd-56-zjQ" firstAttribute="leading" secondItem="X43-S3-rdC" secondAttribute="leading" id="E50-5p-y2a"/>
+                            <constraint firstItem="dgd-56-zjQ" firstAttribute="top" secondItem="X43-S3-rdC" secondAttribute="top" id="G4x-T6-L4V"/>
+                            <constraint firstItem="X43-S3-rdC" firstAttribute="trailing" secondItem="dgd-56-zjQ" secondAttribute="trailing" id="TY1-7I-ovj"/>
+                            <constraint firstItem="X43-S3-rdC" firstAttribute="bottom" secondItem="dgd-56-zjQ" secondAttribute="bottom" id="gt2-t7-cus"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="F1L-7x-SlZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="U59-Pn-FZQ">
+                            <connections>
+                                <action selector="addExercise:" destination="KdG-6Q-dLE" id="s4r-pI-1CY"/>
+                                <segue destination="bWP-78-XZe" kind="popoverPresentation" identifier="addExercise" popoverAnchorBarButtonItem="U59-Pn-FZQ" id="gxN-xD-hJG">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="exerciseTableView" destination="dgd-56-zjQ" id="Z6E-7F-vLe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rxL-sh-k84" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2984.057971014493" y="-299.33035714285711"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="GIW-7e-cPC">
+            <objects>
+                <tabBarController id="7kn-5d-zM1" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UYl-5l-5xZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2ay-iE-tke" kind="relationship" relationship="viewControllers" id="sHt-vA-3Ja"/>
+                        <segue destination="Vqa-QB-Hoh" kind="relationship" relationship="viewControllers" id="etN-jA-gsr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQ9-PU-UK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-750" y="36"/>
+        </scene>
+        <!--Workouts-->
+        <scene sceneID="Nbx-of-VTl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2ay-iE-tke" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Workouts" id="bbC-M8-RbT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6RT-f0-UEy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w4I-1E-9B5" kind="relationship" relationship="rootViewController" id="B5t-uK-Ib0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1A6-za-HqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201.59999999999999" y="-298.52216748768473"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Z2X-pa-xVX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1yp-Ga-yWR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Aqj-Wk-zza"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ebh-fR-2p2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KdG-6Q-dLE" kind="relationship" relationship="rootViewController" id="ju2-rY-86U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X5E-WE-GPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2073.913043478261" y="-299.33035714285711"/>
+        </scene>
+        <!--Exercise List View Controller-->
+        <scene sceneID="d9E-HU-BIm">
+            <objects>
+                <viewController id="bWP-78-XZe" customClass="ExerciseListViewController" customModule="Gym_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K38-kZ-qdd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ExerciseListTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="obP-7I-BI1">
+                                <rect key="frame" x="0.0" y="61" width="414" height="747"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSX-zY-qtl">
+                                <rect key="frame" x="0.0" y="10" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tog-32-dLa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="obP-7I-BI1" firstAttribute="top" secondItem="XSX-zY-qtl" secondAttribute="bottom" id="0hm-cJ-hX4"/>
+                            <constraint firstItem="obP-7I-BI1" firstAttribute="leading" secondItem="Tog-32-dLa" secondAttribute="leading" id="5GV-gr-m9x"/>
+                            <constraint firstItem="Tog-32-dLa" firstAttribute="trailing" secondItem="obP-7I-BI1" secondAttribute="trailing" id="GqB-n5-nvv"/>
+                            <constraint firstItem="XSX-zY-qtl" firstAttribute="top" secondItem="Tog-32-dLa" secondAttribute="top" constant="10" id="c81-1c-2I6"/>
+                            <constraint firstItem="Tog-32-dLa" firstAttribute="bottom" secondItem="obP-7I-BI1" secondAttribute="bottom" id="lED-ud-fv6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="exerciseListTableView" destination="obP-7I-BI1" id="duo-Ph-Y1V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ysg-qj-2vk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2984" y="366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
